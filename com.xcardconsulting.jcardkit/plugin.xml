@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="JCard Kit"
+            id="com.xcardconsulting.jcardkit">
+      </category>
+      <view
+            category="com.xcardconsulting.jcardkit"
+            class="com.xcardconsulting.jcardkit.views.AppletsView"
+            icon="icons/java_16x16.png"
+            id="com.xcardconsulting.jcardkit.views.AppletsView"
+            name="Applets">
+      </view>
+      <view
+            category="com.xcardconsulting.jcardkit"
+            class="com.xcardconsulting.jcardkit.views.CrefSimulatorView"
+            icon="icons/xconsole_16x16.png"
+            id="com.xcardconsulting.jcardkit.views.CrefSimulatorView"
+            name="CREF Simulator">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+      <contexts
+            file="contexts.xml">
+      </contexts>
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.xcardconsulting.jcardkit.perspectives.JCardKitPerspective"
+            icon="icons/releng_gears.gif"
+            id="com.xcardconsulting.jcardkit.perspectives.JCardKitPerspective"
+            name="JCard Kit">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.xcardconsulting.jcardkit.editors.JCardKitEditor"
+            contributorClass="org.eclipse.ui.texteditor.BasicTextEditorActionContributor"
+            extensions="java"
+            icon="icons/accessories-text-editor_16x16.png"
+            id="com.xcardconsulting.jcardkit.editors.JCardKitEditor"
+            name="JCard Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="com.xcardconsulting.jcardkit"
+            name="JCard Kit">
+      </category>
+      <wizard
+            category="com.xcardconsulting.jcardkit"
+            class="com.xcardconsulting.jcardkit.wizards.NewAppletWizard"
+            icon="icons/sample.gif"
+            id="com.xcardconsulting.jcardkit.wizards.NewAppletWizard"
+            name="Java Card Applet">
+      </wizard>
+   </extension>
+
+</plugin>
